@@ -7,11 +7,12 @@ class Pelicula extends BaseController {
 
     public function index()
     {
-
-    
         $peliculaModel = new PeliculaModel();
 
+
         $peliculas = $peliculaModel->findAll();
+
+
 
         return view('index',[
             'peliculas' => $peliculas,
@@ -77,4 +78,5 @@ class Pelicula extends BaseController {
         $peliculaModel->delete($id);
         return redirect()->to('/pelicula');
     }
+    
 }

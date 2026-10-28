@@ -12,3 +12,5 @@ $routes->get('/update/(:any)/(:any)', 'Home::update/$1/$2');
 //$routes->get('/pelicula', 'Pelicula::index');
 
 $routes->presenter('pelicula');
+
+$routes->presenter('categoria');

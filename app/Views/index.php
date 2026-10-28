@@ -30,6 +30,8 @@
                 </td>
             </tr>
         <?php endforeach; ?>
+        
     </table>
+    <a href="<?= site_url('categoria') ?>"> Ver Categorias</a>
 </body>
 </html>
