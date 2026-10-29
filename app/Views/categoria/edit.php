@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Editar Categoría</h1>
-    <form action="<?= site_url('categoria/update/'.$categoria['id']) ?>" method="post">
-        <?=  view('categoria/_forn', ['categoria' => $categoria, 'op' => 'Actualizar Categoría']) ?>
+    <form action="<?= site_url('/dashboard/categoria/update/'.$categoria['id']) ?>" method="post">
+        <?=  view('categoria/_form', ['categoria' => $categoria, 'op' => 'Actualizar Categoría']) ?>
     </form>
 </body>
 </html>

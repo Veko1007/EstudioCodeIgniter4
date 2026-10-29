@@ -14,8 +14,11 @@ class Pelicula extends BaseController {
 
 
 
-        return view('index',[
+        return view('/pelicula/index',[
             'peliculas' => $peliculas,
+            'titulo' => 'Peliculas',
+        'ruta' => '/dashboard/categoria',
+        'textoRuta' => 'Ver Categorias',
         ]);
     }
 
@@ -48,7 +51,7 @@ class Pelicula extends BaseController {
             'titulo' => $this->request->getPost('titulo'),
             'descripcion' => $this->request->getPost('descripcion'),
         ]);
-        return redirect()->to('/pelicula');
+        return redirect()->to('/dashboard/pelicula')->with('success', 'Pelicula creada exitosamente');
     }
 
     //Metodo Get y Post para editar una pelicula (Get/Edit, Post/Update)
@@ -68,7 +71,7 @@ class Pelicula extends BaseController {
             'titulo' => $this->request->getPost('titulo'),
             'descripcion' => $this->request->getPost('descripcion'),
         ]);
-        return redirect()->to('/pelicula');
+        return redirect()->to('/dashboard/pelicula')->with('success', 'Pelicula actualizada exitosamente');
     }
 
     //Metodo para eliminar una pelicula
@@ -76,7 +79,7 @@ class Pelicula extends BaseController {
     {
         $peliculaModel = new PeliculaModel();
         $peliculaModel->delete($id);
-        return redirect()->to('/pelicula');
+        return redirect()->to('/dashboard/pelicula')->with('success', 'Pelicula eliminada exitosamente');
     }
     
 }

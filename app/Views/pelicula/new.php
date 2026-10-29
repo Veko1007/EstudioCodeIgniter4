@@ -6,7 +6,7 @@
     <title>Crear Pelicula</title>
 </head>
 <body>
-    <form action="<?= site_url('pelicula/create') ?>" method="post">
+    <form action="<?= site_url('/dashboard/pelicula/create') ?>" method="post">
         <?=  view('pelicula/_form', ['pelicula' => $pelicula, 'op' => 'Crear Pelicula']) ?>
     </form>
 </body>

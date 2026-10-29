@@ -6,7 +6,7 @@
     <title>Editar Pelicula</title>
 </head>
 <body>
-    <form action="<?= site_url('pelicula/update/'.$pelicula['id']) ?>" method="post">
+    <form action="<?= site_url('/dashboard/pelicula/update/'.$pelicula['id']) ?>" method="post">
         <?=  view('pelicula/_form', ['op' => 'Actualizar Pelicula']) ?>
     </form>
 </body>

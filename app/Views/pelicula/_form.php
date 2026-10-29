@@ -5,3 +5,5 @@
         <textarea name="descripcion" id="descripcion" required><?= $pelicula['descripcion'] ?></textarea><br>
 
         <button type="submit"><?= $op ?></button>
+        <div></div>
+        <a href="<?= site_url($ruta ?? '/dashboard/pelicula') ?>">Volver</a>

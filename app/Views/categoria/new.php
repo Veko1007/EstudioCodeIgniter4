@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Crear Categoría</h1>
-    <form action="<?= site_url('categoria/create') ?>" method="post">
-        <?=  view('categoria/_forn', ['categoria' => $categoria, 'op' => 'Crear Categoría']) ?>
+    <form action="<?= site_url('/dashboard/categoria/create') ?>" method="post">
+        <?=  view('categoria/_form', ['categoria' => $categoria, 'op' => 'Crear Categoría']) ?>
     </form>
 </body>
 </html>
